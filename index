@@ -1,0 +1,10 @@
+// Server
+ServerSocket serverSocket = new ServerSocket(1234);
+Socket socket = serverSocket.accept();
+InputStream is = socket.getInputStream();
+// ... (read and process data)
+
+// Client
+Socket socket = new Socket("localhost", 1234);
+OutputStream os = socket.getOutputStream();
+// ... (send data to server)
